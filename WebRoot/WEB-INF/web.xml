@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+ 
+  
+  <servlet>
+    <servlet-name>ShowHeaderServlet</servlet-name>
+    <servlet-class>com.test.store.ShowHeaderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowContentServlet</servlet-name>
+    <servlet-class>com.test.store.ShowContentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>HandleAttachments</servlet-name>
+    <servlet-class>com.test.store.HandleAttachments</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MarkdownCServlet</servlet-name>
+    <servlet-class>com.md.MarkdownCServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ValidateServlet</servlet-name>
+    <servlet-class>com.test.util.ValidateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>TransportMarkdownMailServlet</servlet-name>
+    <servlet-class>com.test.transport.TransportMarkdownMailServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>ShowHeaderServlet</servlet-name>
+    <url-pattern>/ShowHeaderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowContentServlet</servlet-name>
+    <url-pattern>/ShowContentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HandleAttachments</servlet-name>
+    <url-pattern>/HandleAttachments</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MarkdownCServlet</servlet-name>
+    <url-pattern>/MarkdownCServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ValidateServlet</servlet-name>
+    <url-pattern>/ValidateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TransportMarkdownMailServlet</servlet-name>
+    <url-pattern>/TransportMarkdownMailServlet</url-pattern>
+  </servlet-mapping>
+  
+ 	  <error-page>
+    <error-code>404</error-code>
+    <location>/404.html</location>
+  </error-page>
+</web-app>

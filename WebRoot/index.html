@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+     <script type="text/javascript">
+     bg = new Array(2);  
+     bg[0] = 'image/bg1.jpg';
+     bg[1] = 'image/bg2.jpg';
+     bg[2] = 'image/bg3.jpg';
+     index = Math.floor(Math.random() * bg.length); document.write("<BODY BACKGROUND="+bg[index]+">");
+    
+    	function validate()
+    	{
+    		
+    		var username = document.getElementsByName("username")[0];
+    		var password = document.getElementsByName("password")[0];
+    		
+    		
+    		if(username.value.length == 0)
+    		{
+				alert("username can't be blank!");
+				
+				return false;
+    		}
+    		
+    		if(password.value.length < 6 || password.value.length > 20)
+    		{
+    			alert("length of password is invalid!");
+    			
+    			return false;
+    		}
+    		
+    		return true;
+    	}
+    
+    
+    </script>
+  </head>
+  
+   <script type="text/javascript">
+  bg = new Array(2);  
+  bg[0] = 'image/1.jpg';
+  bg[1] = 'image/2.jpg';
+  bg[2] = 'image/3.jpg';
+  index = Math.floor(Math.random() * bg.length); 
+  document.write("<BODY style=\"background:url('"+bg[index]+"') no-repeat;\">");
+  </script>
+  
+  	<div>
+  	<form action="ValidateServlet" method="post" onsubmit="return validate()">
+  	<label style="font-size:40px;"><b>Geek @ Mail</b></label><br><br><br><br><br>
+  	<ol>
+  		<li>
+  			<label>用户名：</label>
+		<input type="text" name="username">
+		<select name="servername">
+			<option value="126.com">126.com</option>
+			<option value="163.com">163.com</option>
+			<option value="sina.com">sina.com</option>
+		<!--<option value="sohu.com">sohu.com</option>
+			<option value="qq.com">qq.com</option>
+			<option value="outlook.com">outlook.com</option> -->	
+		</select>
+  		</li>
+  		<li>
+  			<label>密码：    </label>&nbsp;
+		    <input type="password" name="password" ></br>
+  		</li>
+  		
+  			
+  		
+  		
+  	
+  	</ol>
+  	<input type="submit" value="登录">&nbsp;&nbsp;<input type="reset" value="重置"></br>
+    	</br> </br>
+		
+		
+	</form>
+  	</div>
+  
+    	
+  </body>
+</html>
